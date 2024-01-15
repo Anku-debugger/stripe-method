@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+    background-repeat: no-repeat;
+}
+
+.slick-prev,
+.slick-next {
+  font-size: 24px;
+}
+
+.slick-prev {
+  left: 0px!important;
+  z-index: 9999;
+  width: 3%!important;
+  height: 30%!important;
+  background-color: #d6dbdc!important;
+}
+
+.slick-next {
+  right: 0px!important;
+  width: 3%!important;
+  height: 30%!important;
+  background-color: #d6dbdc!important;
+}
+
+.slick-dots {
+  bottom: 10px;
+}
+
+.form-group {
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #999999;
+  border-width: 0px 0px 2px 0px;
+}
+
+input.form-control {
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  width: 100%;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+input.form-control::placeholder {
+  color: #cbcbcb;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+table, tr, td {
+  border: 1px solid #cfcfcf;
+  padding: 8px 40px;
+  margin: 0 auto;
+  margin-bottom: 9%;
+}
+
+.StripeElement {
+  padding: 10px;
+  border-width: 0px 0px 2px 0px;
+  border-color: #999999;
+}
+
+.form-actions form button {
+  background-color: #4b5563;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-top: 10px;
+  width: 100%;
+}

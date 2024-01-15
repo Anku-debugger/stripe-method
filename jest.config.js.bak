@@ -1,0 +1,19 @@
+// jest.config.js
+module.exports = {
+  type: "module",
+  preset: "ts-jest",
+  setupFilesAfterEnv: ["<rootDir>/setupTests.js"],
+  transform: {
+    "^.+\\.(js|jsx|ts|tsx)$": "babel-jest",
+    "^.+\\.jsx?$": "babel-jest",
+    "\\.(css)$": "identity-obj-proxy",
+  },
+  setupFiles: ["<rootDir>/jest.setup.js"],
+  testEnvironment: "node",
+  extensionsToTreatAsEsm: [".js", ".jsx", ".ts", ".tsx"],
+  testMatch: ["**/*.test.js"],
+  transformIgnorePatterns: ["/node_modules/", "\\.css$"],
+  moduleNameMapper: {
+    "\\.(css|less|scss|sss|styl)$": "identity-obj-proxy",
+  },
+};
